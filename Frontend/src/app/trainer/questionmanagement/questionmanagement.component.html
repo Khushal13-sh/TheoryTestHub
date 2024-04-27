@@ -1,0 +1,15 @@
+<button (click)="load()">Load</button>
+<table border="1">
+    <tr>
+        <th>SN</th>
+        <th>Name</th>
+    </tr>
+    <tr *ngFor="let obj of questions; let i=index">
+        <th>{{i+1}}</th>
+        <th>{{obj.name}}</th>
+    </tr>
+</table>
+
+Add New Question <br>
+Name:<input type="text" [(ngModel)]="name"><br>
+<button (click)="add()">AddQuestion</button>

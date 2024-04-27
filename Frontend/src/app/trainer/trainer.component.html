@@ -1,0 +1,17 @@
+Welcome Trainer<br>
+<button (click)="logout()">LogOut</button><br>
+<button [disabled]="whatToShow==1" (click)="changeWhatToShow(1)">Test Management</button>
+<button [disabled]="whatToShow==2" (click)="changeWhatToShow(2)">Question Management</button>
+<button [disabled]="whatToShow==3" (click)="changeWhatToShow(3)">Answer Verification</button>
+
+<div *ngIf="whatToShow==1">
+    <app-testmanagement></app-testmanagement>
+</div>
+
+<div *ngIf="whatToShow==2">
+    <app-questionmanagement></app-questionmanagement>
+</div>
+
+<div *ngIf="whatToShow==3">
+    <app-answerverification></app-answerverification>
+</div>
